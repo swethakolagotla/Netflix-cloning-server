@@ -27,7 +27,5 @@ app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
 app.use("/api/movie", movieRouter);
 app.use("/api/list", listRouter);
-
- 
-
-app.listen(4000, () => console.log(`listening to 4k.....`));
+const port = process.env.PORT || 4000
+app.listen(port, () => console.log(`listening to ${port}.....`));
